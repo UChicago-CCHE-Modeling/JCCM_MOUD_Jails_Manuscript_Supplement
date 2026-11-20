@@ -1,0 +1,86 @@
+# Properties file for general runs
+#
+random.seed: 42
+
+# Use a warm up period of 90 days 365 + 90: 455
+# Use a warm up period of 90 days 5*365 + 90: 1915
+stop.at: 1915
+
+# Number of days to run burn in prior to collecting stats
+burnin.period.days: 90
+
+# Input files
+state.transition.data.filename: state_transition_effects.csv
+cji.group.fractions.file: cji_group_fractions.csv
+pwid.group.fractions.file: pwid_group_fractions.csv
+nihu.group.fractions.file: nihu_group_fractions_kelley.csv
+moud.time.on.treatment.file: moud_time_on_treatment.csv
+
+# Ouptut files
+output.directory: output
+initial.persons.data.filename: initial_persons_data
+initial.persons.filename: initial_persons
+event.filename: events
+stats.filename: stats
+
+# Options for output file format: csv, parquet, feather
+output.file.format: csv
+
+naloxone.refill: True
+naloxone.level.jail: 0.0
+naloxone.level.community: 0.0
+naloxone.level.jail.network: 0.0
+
+# Time (day) for simulating a mass jail release
+#incarceration.release.time: -1
+#jail.od.intervention: 1.0
+#jail.od.intervention.start: 0
+
+# Update Params
+# If the model only includes CJI
+cji.only: True
+
+# Total size of CJI OUD + non-OUD population
+cji.all.size: 50000
+
+# Initial Jail population size
+
+cji.jail.initial.size: 6000
+cji.jail.daily.intake: -1
+
+# determine the person lengh of incarceration
+jail.loi.fractions: [0.25, 0.25, 0.50]
+
+# Fraction of jail population that are PWUD/NIHU
+cji.fraction.pwid: 0.035
+cji.fraction.nihu: 0.1
+cji.overdose.tolerance.days: 7
+
+pwid.population.size: 24000
+nihu.population.size: 66000
+
+probability.bystander: 0.60
+probability.naloxone.administer: 0.70
+probability.ems: 0.50
+probability.naloxone.reversal: 0.95
+
+jail.oud.screen.wait.time.days: 1
+jail.oud.screen.probability: 1.0
+
+# Options are Methadone, Buprenorphine_Sublingual, Buprenorphine_XR, Naltrexone_XR, None
+jail.moud.type: 'Methadone'
+
+jail.moud.wait.time.days: 1
+jail.moud.acceptance.rate: 1.0
+
+moud.therapeutic.days.after.last.dose.methadone: 1
+moud.therapeutic.days.after.last.dose.slbup: 1
+moud.therapeutic.days.after.last.dose.xrbup: 90
+moud.therapeutic.days.after.last.dose.xrntx: 30
+
+moud.od.risk: 0.2
+moud.rearrest.risk: 1.0
+
+moud.stop.treatment.od.risk: 1.0
+moud.linkage.to.care.multiplier: 1.0
+
