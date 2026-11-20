@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/1465738822.svg)](https://doi.org/10.5281/zenodo.24407242)
+
 # Code and Data Supplement to *Impact of jail-based MOUD administration on post-release overdose mortality: an agent-based modeling study*
 
 This document provides an overview of the Justice Community Circulation Model (JCCM) code, data, and analysis as a supplement to the manuscript *Impact of jail-based MOUD administration on post-release overdose mortality: an agent-based modeling study*.
